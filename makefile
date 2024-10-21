@@ -12,7 +12,7 @@ commit:
 	read comment; \
 	git commit -m"$$comment"
 sync: commit
-	git push -u z3_learn $(BRANCH)
+	git push -u Z3_learn $(BRANCH)
 reset_hard:
 	git fetch && git reset --hard origin/$(BRANCH)
 
