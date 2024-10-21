@@ -1,0 +1,19 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+        {
+            "label": "test_mirage",
+            "type": "shell",
+            "command": "make test_mirage.out",
+            "problemMatcher": [],
+            "group": "build"
+        },
+        {
+            "label": "test_demogan",
+            "type": "shell",
+            "command": "make test_demogan.out",
+            "problemMatcher": [],
+            "group": "build"
+        },
+    ]
+}
