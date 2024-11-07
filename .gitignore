@@ -1,2 +1,4 @@
-.z3_trace
+*.o
 *.out
+
+/test/*/output
