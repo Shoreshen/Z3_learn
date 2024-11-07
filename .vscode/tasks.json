@@ -2,18 +2,11 @@
 	"version": "2.0.0",
 	"tasks": [
         {
-            "label": "test_mirage",
+            "label": "build_all_tests",
             "type": "shell",
-            "command": "make test_mirage.out",
+            "command": "make build_all_tests",
             "problemMatcher": [],
             "group": "build"
-        },
-        {
-            "label": "test_demogan",
-            "type": "shell",
-            "command": "make test_demogan.out",
-            "problemMatcher": [],
-            "group": "build"
-        },
+        }
     ]
 }

@@ -1,5 +1,6 @@
 #include "../z3/src/api/c++/z3++.h"
 #include <stdio.h>
+#include <iostream>
 
 z3::expr_vector to_expr_vector(z3::context &c,
                                std::vector<z3::expr> const &_vec) {
@@ -70,6 +71,9 @@ int main()
                     add(red(i + i1, x), red(i + i2, y))));
     s.add(forall(x, y, i, red(i, mul(x, y)) == mul(red(i, x), y)));
     s.add(forall(x, y, i, red(i, div(x, y)) == div(red(i, x), y)));
+    auto a = s.assertions()[0].to_string();
     z3::check_result result = s.check();
+    z3::stats stats = s.statistics();
+    std::cout << stats << std::endl;
     return 0;
 }

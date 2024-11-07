@@ -19,7 +19,14 @@ reset_hard:
 PHONY += commit sync sub_pull
 # debug ==================================================================================
 test_mirage.out: test/test_mirage.cpp
-	g++ -g -o $@ $^ -Iz3/src/api/c++ -Iz3/src/api -Lz3/build -lz3
+	g++ -g -o $@ $^ -Iz3/src/api/c++ -Iz3/src/api -Iz3/src -Lz3/build -lz3
 
 test_demogan.out: test/test_demogan.cpp
-	g++ -g -o $@ $^ -Iz3/src/api/c++ -Iz3/src/api -Lz3/build -lz3
+	g++ -g -o $@ $^ -Iz3/src/api/c++ -Iz3/src/api -Iz3/src -Lz3/build -lz3
+
+test_addition.out: test/test_addition.cpp
+	g++ -g -o $@ $^ -Iz3/src/api/c++ -Iz3/src/api -Iz3/src -Lz3/build -lz3
+
+build_all_tests:test_mirage.out test_demogan.out test_addition.out
+
+PHONY += build_all_tests
