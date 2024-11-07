@@ -1,14 +1,12 @@
 #include "../z3/src/api/c++/z3++.h"
-#include "../z3/src/util/trace.h"
 #include <stdio.h>
 #include <iostream>
 
 using namespace z3;
 int main() {
     std::cout << "de-Morgan example\n";
-    enable_all_trace(true);
     z3::context c;
-
+    Z3_enable_trace("solver_na2as");
     z3::sort P = c.uninterpreted_sort("P");
     z3::expr x = c.constant("x", P);
     z3::expr y = c.constant("y", P);

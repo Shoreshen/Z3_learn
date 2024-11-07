@@ -1,0 +1,6 @@
+-------- [solver_na2as] check_sat_core /home/shore/文档/projects/z3_learn/z3/src/solver/solver_na2as.cpp:64 ---------
+(declare-sort P 0)
+(declare-fun add (P P) P)
+(assert (forall ((x P) (y P)) (! (= (add x y) (add y x)) :weight 0)))
+(assert (exists ((x P) (y P)) (! (distinct (add x y) (add y x)) :weight 0)))
+------------------------------------------------

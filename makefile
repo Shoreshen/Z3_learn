@@ -3,6 +3,11 @@
 # $<  表示第一个依赖文件
 # $?  表示比目标还要新的依赖文件列表
 BRANCH = $(shell git symbolic-ref --short HEAD)
+# z3 =====================================================================================
+config_z3:
+	cd z3/build && cmake -G "Ninja" -DCMAKE_BUILD_TYPE=Debug ../
+build_z3:
+	cd z3/build && ninja
 # git ====================================================================================
 z3_pull:
 	cd z3 && git pull
